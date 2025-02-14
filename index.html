@@ -1,0 +1,68 @@
+<html>
+<meta charset='UTF-8'/>
+<meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js">
+</script>
+<link href="style.css" rel="stylesheet" type="text/css" /><script src="script.js"></script>
+<body>
+<style>body{background-image: url("bg.jpg");background-repeat: no-repeat;background-size: 100% 100%; font-family: "Bubblegum Sans", serif;, cursive; animation:none;transition:all .3s ease;}</style>
+
+<div id="konten"><div id="foto"><div class="image"><img id="photo" src="pict.gif" width="200px" height="200px"/></div><span id="sp2"></span></div>
+
+<div id='slider'>
+  <p>Berhasil masuk passwordnya &nbsp;<b id="kamu"></b></p>
+<p> Henlo, ayang! ฅʕ ꈍᴥꈍʔฅ Selamat tanggal 8 yang ke-2 bersama bocilmu ini, Kia! Happy nda selama 2 bulan ini, um? ♡ </p>
+  <p>I’m glad to have you in this lifetime. Tied and destined to a soul like yours; I’m glad, glad, glad that it is you.</p>
+  <p> Thankchuu for coming into my life. Thankchuu for making me smile like crazy. Thankchuu for making me happy.</p>
+    <p> Thankchuu for showing me patience. Thankchuu for looking into my tired eyes and offering me a place to rest. Thankchuu for keeping me warm and holding me when things get too heavy.</p>
+  <p>You were always there with me as my cheerleader, cheering for me in every phase of life. Thankchuu for everything you did for me, thankchuu for loving me.</p>
+  <p>You have been my home since the moment I met you. I may not have realized it at first, but looking back now I know that it has always been you. You are a place that I want to stay forever, you are my home.</p>
+  <p>And I’ll always love you in the only way I know how; with my whole heart ㅡ with everything inside me.</p>
+  <p>Thankchuu for making every day more special. I hope there will be even more happiness for us in the future.</p>
+  <p>I love you, for all that you are, all that you have been, and all you’re yet to be.</p>
+  <p>Pencet love ini yaa<label class='lovein' onClick="duar()">&#128158;</label></p>
+</div><div id="contTom"><a class='button whatsapp' onClick='bukaWa();'><i class='icon whatsapp'></i>Kirim</a></div>
+</div>
+<div id="bodyblur"></div>
+
+<script>  
+var a=0,finish;
+finish = "Like a star that lights up the darkest sky, you’ve illuminated my world in ways I never thought possible. To have you by my side feels like a dream woven from the finest threads of fate. Every moment with you is a reminder of how truly fortunate I am, as if the universe itself conspired to bring us together. With you, I’ve found my home, my peace, and my heart’s deepest longing fulfilled. Happy 2nd Mensiversary, Mas Doni.";
+
+function play() {
+  var audio = new Audio('lucky.mp3');
+  audio.play();
+}
+            
+ function bukaWa(){window.location = "https://x.com/macherric"}
+</script>
+ 
+<script type="text/javascript">            
+            var today = new Date();var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear()+'.';var dateTime = date;
+            const swals = Swal.mixin({
+                allowOutsideClick: false,
+            });
+            async function mulai(){
+                var { value: nama } = await swals.fire({
+                    title: 'Enter your password!',
+                    input: 'text',
+                    confirmButtonText: 'next',
+                    showCancelButton: false,
+                });                           
+                if(nama){
+                	window.nama = nama;
+                    document.getElementById("kamu").innerHTML = "" + window.nama;
+                    setTimeout(showDiv, 700);play();                      
+                } else {
+                    await swals.fire('Heh! Jangan dikosongin atuh buru isi 😡');
+                    mulai();
+                }
+            }
+            mulai();
+</script>
+</body>
+</html>
